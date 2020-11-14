@@ -1,43 +1,37 @@
-var canvas = null,
-    ctx = null,
-    x = 20,
-    y = 20;
+var width = window.innerWidth;
+var height = window.innerHeight;
 
-window.requestAnimationFrame = (function () {
-    return window.requestAnimationFrame ||
-        window.mozRequestAnimationFrame ||
-        window.webkitRequestAnimationFrame ||
-        function (callback) {
-            window.setTimeout(callback, 17);
-        };
-}());
+function drawImage(imageObj) {
+var stage = new Konva.Stage({
+    container: 'container',
+    width: width,
+    height: height,
+});
 
-function paint(ctx) {
-    ctx.fillStyle = '#000';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    
-    ctx.fillStyle = '#0f0';
-    ctx.fillRect(x, y, 20, 20);
+var layer = new Konva.Layer();
+// darth vader
+var darthVaderImg = new Konva.Image({
+    image: imageObj,
+    x: stage.width() / 2 - 200 / 2,
+    y: stage.height() / 2 - 137 / 2,
+    width: 200,
+    height: 137,
+    draggable: true,
+});
+
+// add cursor styling
+darthVaderImg.on('mouseover', function () {
+    document.body.style.cursor = 'pointer';
+});
+darthVaderImg.on('mouseout', function () {
+    document.body.style.cursor = 'default';
+});
+
+layer.add(darthVaderImg);
+stage.add(layer);
 }
-
-function act() {
-    x += 2;
-    if (x > canvas.width) {
-        x = 0;
-    }
-}
-
-function run() {
-    window.requestAnimationFrame(run);
-    act();
-    paint(ctx);
-}
-
-function init() {
-    canvas = document.getElementById('canvas');
-    ctx = canvas.getContext('2d');
-    
-    run();
-}
-
-window.addEventListener('load', init, false);
+var imageObj = new Image();
+imageObj.onload = function () {
+drawImage(this);
+};
+imageObj.src = '../public/img/Tres_capas.png';
