@@ -4,6 +4,15 @@
     },
     "capas2": {
         "src": "../public/img/capas2.png"
+    },
+    "capas3": {
+      "src": "../public/img/capas3.png"
+    },
+    "evento1": {
+      "src": "../public/img/evento1.png"
+    },
+    "servicios1": {
+      "src": "../public/img/servicios1.png"
     }
   }
   
