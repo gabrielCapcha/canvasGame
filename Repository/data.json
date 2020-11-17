@@ -1,9 +1,58 @@
 {
     "capas1": {
-      "src": "../public/img/capas2.png"
+      "src": "../public/img/Tres_capas.png",
+      "width":12,
+      "height":50
     },
     "capas2": {
-        "src": "../public/img/capas2.png"
+        "src": "../public/img/capas2.png",
+        "width":12,
+        "height":50
+    },
+    "capas3": {
+      "src": "../public/img/capas3.png",
+      "width":12,
+      "height":50
+    },
+    "capas4": {
+      "src": "../public/img/capas4.png",
+      "width":12,
+      "height":50
+    },
+    "evento1": {
+      "src": "../public/img/evento1.png",
+      "width":12,
+      "height":50
+    },
+    "servicios1": {
+      "src": "../public/img/servicios1.png",
+      "width":12,
+      "height":50
+    },
+    "servicios2": {
+      "src": "../public/img/servicios2.png",
+      "width":12,
+      "height":50
+    },
+    "microkernel1": {
+      "src": "../public/img/microkernel1.png",
+      "width":12,
+      "height":50
+    },
+    "microkernel2": {
+      "src": "../public/img/microkernel2.png",
+      "width":12,
+      "height":50
+    },
+    "tuberias1": {
+      "src": "../public/img/tuberias1.png",
+      "width":12,
+      "height":50
+    },
+    "tuberias2": {
+      "src": "../public/img/tuberias2.png",
+      "width":12,
+      "height":50
     }
   }
   
